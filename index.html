@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get LetsCalm</title>
+  <meta name="description" content="Install the LetsCalm beta on iPhone, iPad or Android.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="icon.png">
+  <style>
+    :root {
+      --bg: #F8FAFC; --card: #FFFFFF; --line: #E2E8F0; --text: #0F172A; --muted: #64748B;
+      --primary: #0070B0; --dark: #0F172A; --ok: #10B981;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 32px 20px 48px; }
+    .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+    .brand img { width: 36px; height: 36px; }
+    .brand strong { font-size: 20px; font-weight: 900; letter-spacing: .3px; display: block; }
+    .brand span { font-size: 9px; font-weight: 800; letter-spacing: 1.5px; color: var(--primary); }
+    h1 { font-size: 26px; margin: 0 0 8px; }
+    .lead { color: var(--muted); font-size: 15px; line-height: 1.5; margin: 0 0 24px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin-bottom: 16px;
+      box-shadow: 0 2px 6px rgba(15,23,42,.05); }
+    .card h2 { font-size: 16px; margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+    .card p { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 0 0 14px; }
+    .btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; height: 50px;
+      border-radius: 12px; font-weight: 800; font-size: 13px; letter-spacing: .5px; text-transform: uppercase;
+      text-decoration: none; color: #fff; background: var(--primary); border: 0; cursor: pointer; margin-top: 8px; }
+    .btn.dark { background: var(--dark); }
+    .btn:active { opacity: .85; }
+    ol.steps { margin: 0 0 4px; padding: 0; list-style: none; counter-reset: s; }
+    ol.steps li { counter-increment: s; margin-bottom: 18px; }
+    ol.steps li::before { content: counter(s); display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%; background: var(--primary); color: #fff; font-size: 12px;
+      font-weight: 800; margin-right: 8px; vertical-align: middle; }
+    ol.steps li b { font-size: 14px; vertical-align: middle; }
+    ol.steps li p { margin: 6px 0 0 30px; }
+    ol.steps li .btn { margin-left: 30px; width: calc(100% - 30px); }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+    .qr { display: flex; gap: 20px; align-items: center; }
+    .qr svg { width: 132px; height: 132px; flex: none; }
+    .note { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .pill { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 1px; color: var(--ok);
+      background: #F1F5F9; border: 1px solid var(--line); border-radius: 12px; padding: 4px 8px; }
+    .redirect { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+    .spinner { width: 16px; height: 16px; border: 2px solid var(--line); border-top-color: var(--primary); border-radius: 50%;
+      animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    footer { margin-top: 28px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+    footer a { color: var(--primary); }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="brand">
+    <img src="icon.png" alt="">
+    <div><strong>LetsCalm</strong><span>AFFECTIVE BIOACOUSTIC MONITOR</span></div>
+  </div>
+
+  <h1>Get the LetsCalm beta</h1>
+  <p class="lead">LetsCalm listens for signs of stress in your dog or cat and responds with calming audio, all processed on your phone. <span class="pill">PRIVATE BETA</span></p>
+
+  <!-- iPhone / iPad -->
+  <section id="ios" hidden>
+    <div class="card">
+      <div class="redirect"><div class="spinner"></div><span>Opening TestFlight…</span></div>
+      <h2>Install on iPhone or iPad</h2>
+      <p>LetsCalm is distributed through Apple's TestFlight during the beta. If nothing happened, tap the button. TestFlight will offer to install itself first if you don't have it.</p>
+      <a class="btn" id="ios-link" href="#">Open in TestFlight</a>
+    </div>
+  </section>
+
+  <!-- Android -->
+  <section id="android" hidden>
+    <div class="card">
+      <h2>Install on Android</h2>
+      <p>Google Play requires two quick steps for beta apps. Use the same Google account that is signed in on your phone for both.</p>
+      <ol class="steps">
+        <li><b>Join the LetsCalm testers group</b>
+          <p>Tap Join group on the page that opens. This is what tells Google Play you are a tester.</p>
+          <a class="btn dark" id="android-group" href="#">Join the testers group</a></li>
+        <li><b>Opt in on Google Play</b>
+          <p>Give it a minute after joining, then tap Become a tester. The page will then show an install link.</p>
+          <a class="btn" id="android-optin" href="#">Opt in on Google Play</a></li>
+        <li><b>Install LetsCalm from Google Play</b>
+          <p>Please keep it installed while you're testing so the beta can proceed.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Desktop / other -->
+  <section id="all" hidden>
+    <div class="card qr">
+      <div id="qr-svg" aria-label="QR code for get.letscalm.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174 174"><path transform="scale(6)" stroke="#0f172a" d="M2 2.5h7m1 0h3m2 0h2m3 0h7m-25 1h1m5 0h1m1 0h1m3 0h3m1 0h1m1 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m2 0h1m1 0h3m2 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h2m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m3 0h2m2 0h1m3 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-13 1h4m-16 1h1m2 0h6m2 0h2m1 0h2m1 0h1m2 0h1m1 0h3m-24 1h1m2 0h1m2 0h1m1 0h7m3 0h5m-22 1h3m1 0h1m1 0h2m5 0h1m2 0h2m1 0h1m2 0h1m-25 1h3m1 0h2m1 0h2m1 0h1m1 0h1m1 0h1m3 0h2m1 0h4m-25 1h1m1 0h1m1 0h5m1 0h1m1 0h1m1 0h2m2 0h2m4 0h1m-25 1h4m1 0h1m2 0h3m3 0h4m2 0h1m2 0h1m-24 1h3m2 0h2m1 0h5m1 0h2m1 0h2m1 0h5m-25 1h1m1 0h1m1 0h2m2 0h1m2 0h1m2 0h1m3 0h2m1 0h2m1 0h1m-25 1h1m1 0h5m2 0h2m1 0h2m1 0h6m1 0h2m-16 1h2m1 0h2m3 0h1m3 0h1m1 0h2m-24 1h7m1 0h5m1 0h1m1 0h1m1 0h1m1 0h1m3 0h1m-25 1h1m5 0h1m1 0h3m1 0h2m1 0h2m3 0h1m3 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h7m-21 1h1m1 0h3m1 0h1m1 0h1m3 0h3m1 0h1m1 0h1m4 0h2m-25 1h1m1 0h3m1 0h1m4 0h1m1 0h1m2 0h2m2 0h5m-25 1h1m5 0h1m2 0h3m2 0h1m4 0h2m1 0h3m-25 1h7m1 0h1m1 0h1m1 0h1m3 0h2m3 0h1m2 0h1"/></svg></div>
+      <div>
+        <h2>Open this page on your phone</h2>
+        <p style="margin:0">Scan the code with your phone's camera and it will take you straight to the right download for iPhone, iPad or Android.</p>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h2>iPhone &amp; iPad</h2>
+        <p>Delivered through Apple TestFlight. Open this link on the device you want to install on.</p>
+        <a class="btn" id="ios-link-2" href="#">Open in TestFlight</a>
+      </div>
+      <div class="card">
+        <h2>Android</h2>
+        <p>Two steps on Google Play: join the testers group, then opt in. Do both with the Google account on your phone.</p>
+        <a class="btn dark" id="android-group-2" href="#">1. Join the testers group</a>
+        <a class="btn" id="android-optin-2" href="#">2. Opt in on Google Play</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    On first launch the app will ask you to read and accept the beta participation agreement. LetsCalm processes all audio on your device; nothing you or your pet says is sent to a server.<br>
+    Questions: <a href="mailto:admin@letscalm.com">admin@letscalm.com</a> · LetsCalm LLC, Clarksville, MD
+  </footer>
+</main>
+
+<script>
+  // --- Links: edit these when the app moves from beta to the stores. ---
+  const LINKS = {
+    ios: 'https://testflight.apple.com/join/YxneXjur',
+    // Later: 'https://apps.apple.com/app/id6782188883'
+    androidGroup: 'https://groups.google.com/g/letscalm-testers',
+    androidOptIn: 'https://play.google.com/apps/testing/com.letscalm.mobile',
+    // Later, replace both Android steps with: 'https://play.google.com/store/apps/details?id=com.letscalm.mobile'
+  };
+
+  document.getElementById('ios-link').href = LINKS.ios;
+  document.getElementById('ios-link-2').href = LINKS.ios;
+  document.getElementById('android-group').href = LINKS.androidGroup;
+  document.getElementById('android-group-2').href = LINKS.androidGroup;
+  document.getElementById('android-optin').href = LINKS.androidOptIn;
+  document.getElementById('android-optin-2').href = LINKS.androidOptIn;
+
+  // --- Detection. `?os=ios|android|all` forces a view for testing. ---
+  const ua = navigator.userAgent;
+  const forced = new URLSearchParams(location.search).get('os');
+  const isIOS = /iPhone|iPad|iPod/.test(ua)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPadOS reports itself as a Mac
+  const isAndroid = /Android/.test(ua);
+  const view = forced || (isIOS ? 'ios' : isAndroid ? 'android' : 'all');
+
+  document.getElementById(view).hidden = false;
+
+  // iOS: go straight to TestFlight. The page stays behind as the fallback.
+  if (view === 'ios' && !forced) {
+    setTimeout(() => { location.href = LINKS.ios; }, 300);
+  }
+</script>
+</body>
+</html>
