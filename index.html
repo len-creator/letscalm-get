@@ -143,10 +143,12 @@
   // --- Detection. `?os=ios|android|all` forces a view for testing. ---
   const ua = navigator.userAgent;
   const forced = new URLSearchParams(location.search).get('os');
-  const isIOS = /iPhone|iPad|iPod/.test(ua)
-    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPadOS reports itself as a Mac
+  // Android first: the iPadOS heuristic below (a "Mac" with touch points) can
+  // also match an Android browser running on a touch device, so it must not win.
   const isAndroid = /Android/.test(ua);
-  const view = forced || (isIOS ? 'ios' : isAndroid ? 'android' : 'all');
+  const isIOS = !isAndroid && (/iPhone|iPad|iPod/.test(ua)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)); // iPadOS reports itself as a Mac
+  const view = forced || (isAndroid ? 'android' : isIOS ? 'ios' : 'all');
 
   document.getElementById(view).hidden = false;
 
