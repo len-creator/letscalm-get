@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LetsCalm privacy policy</title>
+  <meta name="description" content="What the LetsCalm app collects, what it never collects, and how LetsCalm LLC uses it.">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="legal">
+  <header class="top">
+    <a class="brand" href="/">
+      <img src="icon.png" alt="">
+      <div><strong>LetsCalm</strong><span>AFFECTIVE BIOACOUSTIC MONITOR</span></div>
+    </a>
+    <nav><a href="/">Home</a><a href="/#download">Download</a></nav>
+  </header>
+
+  <h1>Privacy policy</h1>
+  <p class="meta">LetsCalm LLC · Effective 2 September 2026 · Applies to the LetsCalm mobile app (iOS and Android) and to letscalm.com</p>
+
+  <p>LetsCalm is built so that the most sensitive thing it touches, the sound in your home, never leaves your phone. This policy explains exactly what the app does with data, the few things that do reach us, why, and how to get them removed. If anything here is unclear, email <a href="mailto:admin@letscalm.com">admin@letscalm.com</a>.</p>
+
+  <h2>1. The short version</h2>
+  <ul>
+    <li>Microphone audio is analyzed on your device and discarded immediately. It is never recorded, stored, or transmitted.</li>
+    <li>The app has no accounts, no advertising, no analytics SDK, and no data sales.</li>
+    <li>Three things can reach us, each only when you choose it: an email address for alerts, your acceptance of the beta agreement, and crash or bug reports.</li>
+    <li>You can have any of it deleted by emailing us.</li>
+  </ul>
+
+  <h2>2. Microphone and audio</h2>
+  <p>LetsCalm's purpose is to listen for pet vocalizations, so it asks for microphone permission and, if you allow it, keeps listening while the app is open and in the background. What happens to that audio:</p>
+  <ul>
+    <li>Audio is captured in short frames, converted in memory into numeric features, and evaluated by machine-learning models that run entirely on the phone. Each frame is discarded as soon as it has been evaluated.</li>
+    <li>No audio, and no data derived from audio, is written to storage or sent over the network. The app does not contain any code path that uploads sound.</li>
+    <li>You can stop listening at any time with the button on the main screen, and revoke the permission in your phone's settings.</li>
+    <li>Because the microphone may pick up other people in your home, you are responsible for telling household members and guests that the app is running.</li>
+  </ul>
+  <p>Separately, the app lets you record a short calming phrase in your own voice, or pick an audio file, to play back to your pet. Those recordings are stored only on your device and are never uploaded.</p>
+
+  <h2>3. What stays on your phone</h2>
+  <p>The following is stored on your device only, and is removed when you uninstall the app:</p>
+  <ul>
+    <li>Your settings: whether calming audio and alerts are enabled, which audio is selected, and your pet's name if you entered one.</li>
+    <li>A mediation history: timestamps of when the app played audio or sent an alert, with the detected species and mood. You can clear it from Settings.</li>
+    <li>A copy of your beta agreement acceptance record (see section 5).</li>
+    <li>A random install identifier, used to tie crash reports and the acceptance record to the same install without identifying you.</li>
+  </ul>
+
+  <h2>4. Email alerts (optional)</h2>
+  <p>If you turn on notification alerts, you enter an email address and confirm it with a code we send you. After that, when the app detects sustained distress it sends a message to our alert service, which emails that address. The message contains only: the detected species, the mood or barking reading, a timestamp, and your pet's name if you provided one. It never contains audio.</p>
+  <ul>
+    <li>Your address is stored on your device and inside a signed token the app uses to authorize alerts. Our alert service is stateless and keeps no database of addresses.</li>
+    <li>Emails are delivered through SendGrid (Twilio Inc.), which processes the address and message content to deliver them, under its own privacy policy.</li>
+    <li>You can change or remove the address, or switch alerts off, in Settings at any time.</li>
+  </ul>
+
+  <h2>5. Beta agreement acceptance record</h2>
+  <p>During the beta, the app asks you to accept the Beta Participation and Non-Disclosure Agreement before first use, by typing your full name and email address and ticking a box. So that we hold a verifiable record of that agreement, the app sends the following to us, and we keep it for as long as the agreement is in force and for any period afterwards that the law requires:</p>
+  <table>
+    <tr><th>Data</th><th>Why</th></tr>
+    <tr><td>Your typed name and email address</td><td>Identify the person who entered into the agreement, and send you a copy</td></tr>
+    <tr><td>Date and time of acceptance, on the device and on our server</td><td>Establish when the agreement was made</td></tr>
+    <tr><td>The version and a cryptographic hash of the agreement text you saw</td><td>Prove which wording you accepted</td></tr>
+    <tr><td>App version, platform, and OS version; the install identifier</td><td>Relate the acceptance to the software you were given</td></tr>
+    <tr><td>The IP address and network client identifier of the request</td><td>Evidence that the acceptance came from your device</td></tr>
+  </table>
+  <p>The record is emailed to a LetsCalm LLC mailbox and a copy is emailed to you. It is not used for marketing and is not shared with anyone except as required to enforce the agreement or by law.</p>
+
+  <h2>6. Crash reports and problem reports</h2>
+  <p>If the app crashes, or if you use "Report a problem" in Settings, a report goes to Sentry (Functional Software, Inc.), the crash-reporting service we use. A report contains a stack trace, the app version, device model and OS version, the install identifier, recent app log lines, and the last few mediation-history entries. If you write a description in a problem report, that text is included. Reports never contain audio, your name, or your email address; we have configured Sentry not to collect personal identifiers or IP addresses. Sentry retains reports for 90 days.</p>
+
+  <h2>7. This website</h2>
+  <p>letscalm.com is a static site hosted on GitHub Pages (GitHub, Inc.). It sets no cookies and runs no analytics. GitHub may log requests, including IP addresses, for the operation and security of its service, under GitHub's privacy statement.</p>
+
+  <h2>8. Service providers</h2>
+  <table>
+    <tr><th>Provider</th><th>Purpose</th><th>Data it handles</th></tr>
+    <tr><td>Apple (TestFlight, App Store)</td><td>Distributing the app</td><td>Whatever Apple collects for TestFlight under its own terms; we see aggregate install and crash counts only</td></tr>
+    <tr><td>Google (Google Play)</td><td>Distributing the app</td><td>Whatever Google collects for Play testing under its own terms</td></tr>
+    <tr><td>Vercel, Inc.</td><td>Hosting the alert and acceptance-record functions</td><td>Requests pass through Vercel; nothing is stored there</td></tr>
+    <tr><td>SendGrid (Twilio Inc.)</td><td>Sending verification codes, alert emails, and acceptance records</td><td>Recipient address and message content</td></tr>
+    <tr><td>Sentry (Functional Software, Inc.)</td><td>Crash and problem reports</td><td>Technical report data as described in section 6</td></tr>
+    <tr><td>GitHub, Inc.</td><td>Hosting this website</td><td>Standard web server request logs</td></tr>
+  </table>
+  <p>We do not sell personal information and we do not share it with advertisers or data brokers.</p>
+
+  <h2>9. Your choices and rights</h2>
+  <ul>
+    <li><b>Microphone:</b> deny or revoke the permission in your phone's settings. The app cannot listen without it.</li>
+    <li><b>Alerts:</b> switch off or change the address in Settings.</li>
+    <li><b>Local data:</b> clear the mediation history in Settings, or uninstall the app to remove everything stored on the device.</li>
+    <li><b>Deletion:</b> to have your acceptance record, alert emails we hold, or problem reports deleted, email <a href="mailto:admin@letscalm.com">admin@letscalm.com</a> from the address you used. We will confirm within 30 days. We may keep an acceptance record where we need it to enforce the agreement or meet a legal obligation, and will tell you if so.</li>
+    <li><b>Access:</b> you can ask us for a copy of the information we hold about you at the same address.</li>
+  </ul>
+
+  <h2>10. Children</h2>
+  <p>LetsCalm is not directed to children under 13 and we do not knowingly collect personal information from them. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+
+  <h2>11. Security</h2>
+  <p>Data in transit to our services is encrypted with HTTPS. Acceptance records carry a cryptographic signature so that alterations can be detected. Because the app keeps audio and settings on your device, the security of that data also depends on your phone's own protections such as a passcode.</p>
+
+  <h2>12. Changes</h2>
+  <p>If we change this policy in a way that matters, we will update the effective date above and, for changes that affect data we already hold, notify you at the email address on file where we have one. Earlier versions are available on request.</p>
+
+  <h2>13. Contact</h2>
+  <p>LetsCalm LLC<br>12639 Vincents Way, Clarksville, MD 21029, USA<br><a href="mailto:admin@letscalm.com">admin@letscalm.com</a></p>
+
+  <footer>
+    <a href="/">Home</a><a href="mailto:admin@letscalm.com">admin@letscalm.com</a><br>
+    © 2026 LetsCalm LLC
+  </footer>
+</main>
+</body>
+</html>
