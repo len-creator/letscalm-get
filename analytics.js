@@ -1,7 +1,7 @@
 // Google Analytics 4. Set the Measurement ID here (Google Analytics -> Admin ->
 // Data Streams -> letscalm.com). Nothing loads while it is left as a placeholder.
 (function () {
-  var ID = 'G-XXXXXXXXXX';
+  var ID = 'G-B1T55VHYBN';
   if (!/^G-[A-Z0-9]{6,}$/.test(ID) || /^G-X+$/.test(ID)) return;
 
   var s = document.createElement('script');
