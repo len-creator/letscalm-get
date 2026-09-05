@@ -114,6 +114,14 @@
     </div>
   </section>
 
+  <!-- COMMUNITY -->
+  <h2 class="section" id="community">Join the beta community</h2>
+  <div class="card">
+    <h3>Talk to us on Discord</h3>
+    <p>Beta testers meet on our Discord server. Report bugs, ask questions, share what your pet's readings looked like, and hear about new builds first.</p>
+    <a class="btn dark" id="discord-link" href="#" rel="noopener" target="_blank">Join the Discord</a>
+  </div>
+
   <footer>
     <a href="/privacy.html">Privacy policy</a><a href="mailto:admin@letscalm.com">admin@letscalm.com</a><br>
     © 2026 LetsCalm LLC, Clarksville, Maryland. LetsCalm is not a veterinary service; if you are worried about your pet's health, talk to your vet.
@@ -127,12 +135,14 @@
     // Later: 'https://apps.apple.com/app/id6782188883'
     androidGroup: 'https://groups.google.com/a/letscalm.com/g/letscalm-testers/',
     androidOptIn: 'https://play.google.com/apps/testing/com.letscalm.mobile',
+    discord: 'https://discord.gg/NavzxsYyVa',
     // Later, replace both Android steps with: 'https://play.google.com/store/apps/details?id=com.letscalm.mobile'
   };
 
   for (const id of ['ios-link', 'ios-link-2']) document.getElementById(id).href = LINKS.ios;
   for (const id of ['android-group', 'android-group-2']) document.getElementById(id).href = LINKS.androidGroup;
   for (const id of ['android-optin', 'android-optin-2']) document.getElementById(id).href = LINKS.androidOptIn;
+  document.getElementById('discord-link').href = LINKS.discord;
 
   // --- Detection. `?os=ios|android|all` forces a view for testing. ---
   const ua = navigator.userAgent;

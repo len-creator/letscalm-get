@@ -21,7 +21,8 @@
     var a = e.target.closest && e.target.closest('a.btn');
     if (!a || !a.id) return;
     var platform = /^ios/.test(a.id) ? 'ios' : /^android-group/.test(a.id) ? 'android_group'
-      : /^android-optin/.test(a.id) ? 'android_optin' : a.id === 'hero-btn' ? 'hero' : 'other';
+      : /^android-optin/.test(a.id) ? 'android_optin' : a.id === 'hero-btn' ? 'hero'
+      : a.id === 'discord-link' ? 'discord' : 'other';
     gtag('event', 'download_click', { platform: platform });
   });
 })();
