@@ -61,7 +61,7 @@
 
   <!-- DOWNLOAD -->
   <h2 class="section" id="download">Download the beta</h2>
-  <p class="lead" style="font-size:14px">LetsCalm is in private beta. On first launch the app asks you to read and accept the beta participation agreement.</p>
+  <p class="lead" style="font-size:14px">LetsCalm is in open beta: anyone can join. On first launch the app asks you to read and accept the beta participation agreement.</p>
 
   <!-- iPhone / iPad -->
   <section id="ios" hidden>
@@ -76,17 +76,9 @@
   <section id="android" hidden>
     <div class="card">
       <h3>Install on Android</h3>
-      <p>Google Play requires two quick steps for beta apps. Use the same Google account that is signed in on your phone for both.</p>
-      <ol class="steps">
-        <li><b>Join the LetsCalm testers group</b>
-          <p>Tap Join group on the page that opens. This is what tells Google Play you are a tester.</p>
-          <a class="btn dark" id="android-group" href="#">Join the testers group</a></li>
-        <li><b>Opt in on Google Play</b>
-          <p>Give it a minute after joining, then tap Become a tester. The page will then show an install link.</p>
-          <a class="btn" id="android-optin" href="#">Opt in on Google Play</a></li>
-        <li><b>Install LetsCalm from Google Play</b>
-          <p>Please keep it installed while you're testing so the beta can proceed.</p></li>
-      </ol>
+      <p>LetsCalm is in open testing on Google Play. Open it in the Play Store, tap Join the beta if it asks, then Install.</p>
+      <a class="btn" id="android-play" href="#">Get it on Google Play</a>
+      <p style="margin-top:14px">Please keep it installed while you're testing so the beta can proceed.</p>
     </div>
   </section>
 
@@ -107,9 +99,9 @@
       </div>
       <div class="card">
         <h3>Android</h3>
-        <p>Two steps on Google Play: join the testers group, then opt in. Do both with the Google account on your phone.</p>
-        <a class="btn dark" id="android-group-2" href="#">1. Join the testers group</a>
-        <a class="btn" id="android-optin-2" href="#">2. Opt in on Google Play</a>
+        <p>Open testing on Google Play. Join the beta here with the Google account you use on your phone, then install it from the Play Store on that phone.</p>
+        <a class="btn" id="android-optin" href="#">Join the beta on Google Play</a>
+        <a class="btn dark" id="android-play-2" href="#">View in the Play Store</a>
       </div>
     </div>
   </section>
@@ -133,15 +125,16 @@
   const LINKS = {
     ios: 'https://testflight.apple.com/join/YxneXjur',
     // Later: 'https://apps.apple.com/app/id6782188883'
-    androidGroup: 'https://groups.google.com/a/letscalm.com/g/letscalm-testers/',
+    // Open testing: the store listing works on Android phones; the testing
+    // page is the web opt-in for anyone arriving from a computer.
+    androidPlay: 'https://play.google.com/store/apps/details?id=com.letscalm.mobile',
     androidOptIn: 'https://play.google.com/apps/testing/com.letscalm.mobile',
     discord: 'https://discord.gg/NavzxsYyVa',
-    // Later, replace both Android steps with: 'https://play.google.com/store/apps/details?id=com.letscalm.mobile'
   };
 
   for (const id of ['ios-link', 'ios-link-2']) document.getElementById(id).href = LINKS.ios;
-  for (const id of ['android-group', 'android-group-2']) document.getElementById(id).href = LINKS.androidGroup;
-  for (const id of ['android-optin', 'android-optin-2']) document.getElementById(id).href = LINKS.androidOptIn;
+  for (const id of ['android-play', 'android-play-2']) document.getElementById(id).href = LINKS.androidPlay;
+  document.getElementById('android-optin').href = LINKS.androidOptIn;
   document.getElementById('discord-link').href = LINKS.discord;
 
   // --- Detection. `?os=ios|android|all` forces a view for testing. ---
@@ -159,7 +152,9 @@
     document.getElementById('hero-btn').textContent = 'Get it on TestFlight';
     document.getElementById('hero-note').textContent = 'Free during the beta. Opens Apple TestFlight.';
   } else if (view === 'android') {
-    document.getElementById('hero-note').textContent = 'Free during the beta. Two quick steps on Google Play.';
+    document.getElementById('hero-btn').href = LINKS.androidPlay;
+    document.getElementById('hero-btn').textContent = 'Get it on Google Play';
+    document.getElementById('hero-note').textContent = 'Free during the beta. Opens Google Play.';
   }
 </script>
 </body>
