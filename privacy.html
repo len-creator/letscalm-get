@@ -20,7 +20,7 @@
   </header>
 
   <h1>Privacy policy</h1>
-  <p class="meta">LetsCalm LLC · Effective 3 September 2026 · Applies to the LetsCalm mobile app (iOS and Android) and to letscalm.com</p>
+  <p class="meta">LetsCalm LLC · Effective 7 November 2026 · Applies to the LetsCalm mobile app (iOS and Android) and to letscalm.com</p>
 
   <p>LetsCalm is built so that the most sensitive thing it touches, the sound in your home, never leaves your phone. This policy explains exactly what the app does with data, the few things that do reach us, why, and how to get them removed. If anything here is unclear, email <a href="mailto:admin@letscalm.com">admin@letscalm.com</a>.</p>
 
@@ -48,7 +48,7 @@
     <li>Your settings: whether calming audio and alerts are enabled, which audio is selected, and your pet's name if you entered one.</li>
     <li>A mediation history: timestamps of when the app played audio or sent an alert, with the detected species and mood. You can clear it from Settings.</li>
     <li>A copy of your beta agreement acceptance record (see section 5).</li>
-    <li>A random install identifier, used to tie crash reports and the acceptance record to the same install without identifying you.</li>
+    <li>A random install identifier, used to tie crash reports and the acceptance record to the same install.</li>
   </ul>
 
   <h2>4. Email alerts (optional)</h2>
@@ -56,20 +56,21 @@
   <ul>
     <li>Your address is stored on your device and inside a signed token the app uses to authorize alerts. Our alert service is stateless and keeps no database of addresses.</li>
     <li>Emails are delivered through SendGrid (Twilio Inc.), which processes the address and message content to deliver them, under its own privacy policy.</li>
+    <li>Every request to our alert service also includes the app's package name and, on Android, a hash of its signing certificate, so we can spot modified copies of the app. These describe the app build, not you.</li>
     <li>You can change or remove the address, or switch alerts off, in Settings at any time.</li>
   </ul>
 
   <h2>5. Beta agreement acceptance record</h2>
-  <p>During the beta, the app asks you to accept the Beta Participation and Non-Disclosure Agreement before first use, by typing your full name and email address and ticking a box. So that we hold a verifiable record of that agreement, the app sends the following to us, and we keep it for as long as the agreement is in force and for any period afterwards that the law requires:</p>
+  <p>During the beta, the app asks you to accept the Beta Participation and Non-Disclosure Agreement before first use, by ticking a box and tapping "I Agree". You do not type your name or an email address. So that we hold a verifiable record of that agreement, the app sends the following to us, and we keep it for as long as the agreement is in force and for any period afterwards that the law requires:</p>
   <table>
     <tr><th>Data</th><th>Why</th></tr>
-    <tr><td>Your typed name and email address</td><td>Identify the person who entered into the agreement, and send you a copy</td></tr>
+    <tr><td>The install identifier and, on iPhone and iPad, the vendor identifier Apple provides for our apps</td><td>Relate the acceptance to your install of the app</td></tr>
     <tr><td>Date and time of acceptance, on the device and on our server</td><td>Establish when the agreement was made</td></tr>
-    <tr><td>The version and a cryptographic hash of the agreement text you saw</td><td>Prove which wording you accepted</td></tr>
-    <tr><td>App version, platform, and OS version; the install identifier</td><td>Relate the acceptance to the software you were given</td></tr>
+    <tr><td>The version, a cryptographic hash, and a copy of the agreement text you saw</td><td>Prove which wording you accepted</td></tr>
+    <tr><td>App version and build number, platform, OS version, the app's package name and, on Android, a hash of its signing certificate</td><td>Relate the acceptance to the software you were given</td></tr>
     <tr><td>The IP address and network client identifier of the request</td><td>Evidence that the acceptance came from your device</td></tr>
   </table>
-  <p>The record is emailed to a LetsCalm LLC mailbox and a copy is emailed to you. It is not used for marketing and is not shared with anyone except as required to enforce the agreement or by law.</p>
+  <p>Under the agreement, you are identified by that record and by the Google Play or TestFlight account through which you joined the beta. The record is emailed to a LetsCalm LLC mailbox. Because we do not ask for your email address, no copy is emailed to you; the date of acceptance, acceptance ID, and agreement version are shown in Settings. Acceptances made before 25 September 2026 used an earlier form, so those records also contain the name and email address typed at the time, and a copy was emailed to that address. Acceptances made before 7 November 2026 also contain device details: the Android ID on Android, and the device make, model, name and OS build. The record is not used for marketing and is not shared with anyone except as required to enforce the agreement or by law.</p>
 
   <h2>6. Crash reports and problem reports</h2>
   <p>If the app crashes, or if you use "Report a problem" in Settings, a report goes to Sentry (Functional Software, Inc.), the crash-reporting service we use. A report contains a stack trace, the app version, device model and OS version, the install identifier, recent app log lines, and the last few mediation-history entries. If you write a description in a problem report, that text is included. Reports never contain audio, your name, or your email address; we have configured Sentry not to collect personal identifiers or IP addresses. Sentry retains reports for 90 days.</p>
@@ -96,7 +97,7 @@
     <li><b>Microphone:</b> deny or revoke the permission in your phone's settings. The app cannot listen without it.</li>
     <li><b>Alerts:</b> switch off or change the address in Settings.</li>
     <li><b>Local data:</b> clear the mediation history in Settings, or uninstall the app to remove everything stored on the device.</li>
-    <li><b>Deletion:</b> to have your acceptance record, alert emails we hold, or problem reports deleted, email <a href="mailto:admin@letscalm.com">admin@letscalm.com</a> from the address you used. We will confirm within 30 days. We may keep an acceptance record where we need it to enforce the agreement or meet a legal obligation, and will tell you if so.</li>
+    <li><b>Deletion:</b> to have your acceptance record, alert emails we hold, or problem reports deleted, email <a href="mailto:admin@letscalm.com">admin@letscalm.com</a>. For an acceptance record, include the acceptance ID shown in Settings so we can find it; for anything tied to an email address, write from that address. We will confirm within 30 days. We may keep an acceptance record where we need it to enforce the agreement or meet a legal obligation, and will tell you if so.</li>
     <li><b>Access:</b> you can ask us for a copy of the information we hold about you at the same address.</li>
   </ul>
 
