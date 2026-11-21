@@ -67,8 +67,9 @@
   <section id="ios" hidden>
     <div class="card">
       <h3>Install on iPhone or iPad</h3>
-      <p>LetsCalm is distributed through Apple's TestFlight during the beta. TestFlight will offer to install itself first if you don't have it.</p>
-      <a class="btn" id="ios-link" href="#">Open in TestFlight</a>
+      <p>LetsCalm is on the App Store for iPhone and iPad.</p>
+      <a class="btn" id="ios-link" href="#">Get it on the App Store</a>
+      <p style="margin-top:14px">Beta testers: <a class="ios-beta" href="#">get new builds first on TestFlight</a>.</p>
     </div>
   </section>
 
@@ -94,8 +95,9 @@
     <div class="grid">
       <div class="card">
         <h3>iPhone &amp; iPad</h3>
-        <p>Delivered through Apple TestFlight. Open this link on the device you want to install on.</p>
-        <a class="btn" id="ios-link-2" href="#">Open in TestFlight</a>
+        <p>Available on the App Store. Open this link on the device you want to install on.</p>
+        <a class="btn" id="ios-link-2" href="#">Get it on the App Store</a>
+        <p style="margin-top:14px">Beta testers: <a class="ios-beta" href="#">get new builds first on TestFlight</a>.</p>
       </div>
       <div class="card">
         <h3>Android</h3>
@@ -123,8 +125,8 @@
 <script>
   // --- Links: edit these when the app moves from beta to the stores. ---
   const LINKS = {
-    ios: 'https://testflight.apple.com/join/YxneXjur',
-    // Later: 'https://apps.apple.com/app/id6782188883'
+    ios: 'https://apps.apple.com/app/id6782188883',
+    iosBeta: 'https://testflight.apple.com/join/YxneXjur',
     // Open testing: the store listing works on Android phones; the testing
     // page is the web opt-in for anyone arriving from a computer.
     androidPlay: 'https://play.google.com/store/apps/details?id=com.letscalm.mobile',
@@ -133,6 +135,7 @@
   };
 
   for (const id of ['ios-link', 'ios-link-2']) document.getElementById(id).href = LINKS.ios;
+  for (const a of document.querySelectorAll('.ios-beta')) a.href = LINKS.iosBeta;
   for (const id of ['android-play', 'android-play-2']) document.getElementById(id).href = LINKS.androidPlay;
   document.getElementById('android-optin').href = LINKS.androidOptIn;
   document.getElementById('discord-link').href = LINKS.discord;
@@ -149,8 +152,8 @@
   // On a phone the hero button can go straight to the store link.
   if (view === 'ios') {
     document.getElementById('hero-btn').href = LINKS.ios;
-    document.getElementById('hero-btn').textContent = 'Get it on TestFlight';
-    document.getElementById('hero-note').textContent = 'Free during the beta. Opens Apple TestFlight.';
+    document.getElementById('hero-btn').textContent = 'Get it on the App Store';
+    document.getElementById('hero-note').textContent = 'Free on the App Store.';
   } else if (view === 'android') {
     document.getElementById('hero-btn').href = LINKS.androidPlay;
     document.getElementById('hero-btn').textContent = 'Get it on Google Play';
