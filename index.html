@@ -21,10 +21,10 @@
 
   <!-- HERO -->
   <h1>Know when your pet is stressed, and help them settle.</h1>
-  <p class="lead">LetsCalm runs on your phone and listens for the sounds that mean your cat, dog, pig, goat or horse is not okay. When it hears them, it plays calming audio and can let you know by email. Every sound is analyzed on the device itself; nothing is recorded or uploaded. <span class="pill">OPEN BETA</span></p>
+  <p class="lead">LetsCalm runs on your phone and listens for the sounds that mean your cat, dog, pig, goat or horse is not okay. When it hears them, it plays calming audio and can let you know by email. Every sound is analyzed on the device itself; nothing is recorded or uploaded.</p>
   <div class="hero-cta">
-    <a class="btn" href="#download" id="hero-btn">Get the beta</a>
-    <span class="note" id="hero-note">Free during the beta. iPhone, iPad and Android.</span>
+    <a class="btn" href="#download" id="hero-btn">Get the app</a>
+    <span class="note" id="hero-note">Free to download. iPhone, iPad and Android.</span>
   </div>
 
   <!-- HOW IT WORKS -->
@@ -60,8 +60,8 @@
   </div>
 
   <!-- DOWNLOAD -->
-  <h2 class="section" id="download">Download the beta</h2>
-  <p class="lead" style="font-size:14px">LetsCalm is in open beta: anyone can join. On first launch the app asks you to read and accept the beta participation agreement.</p>
+  <h2 class="section" id="download">Download LetsCalm</h2>
+  <p class="lead" style="font-size:14px">LetsCalm is available on the App Store and Google Play.</p>
 
   <!-- iPhone / iPad -->
   <section id="ios" hidden>
@@ -69,7 +69,6 @@
       <h3>Install on iPhone or iPad</h3>
       <p>LetsCalm is on the App Store for iPhone and iPad.</p>
       <a class="btn" id="ios-link" href="#">Get it on the App Store</a>
-      <p style="margin-top:14px">Beta testers: <a class="ios-beta" href="#">get new builds first on TestFlight</a>.</p>
     </div>
   </section>
 
@@ -77,9 +76,8 @@
   <section id="android" hidden>
     <div class="card">
       <h3>Install on Android</h3>
-      <p>LetsCalm is in open testing on Google Play. Open it in the Play Store, tap Join the beta if it asks, then Install.</p>
+      <p>LetsCalm is on Google Play for Android phones and tablets.</p>
       <a class="btn" id="android-play" href="#">Get it on Google Play</a>
-      <p style="margin-top:14px">Please keep it installed while you're testing so the beta can proceed.</p>
     </div>
   </section>
 
@@ -97,22 +95,20 @@
         <h3>iPhone &amp; iPad</h3>
         <p>Available on the App Store. Open this link on the device you want to install on.</p>
         <a class="btn" id="ios-link-2" href="#">Get it on the App Store</a>
-        <p style="margin-top:14px">Beta testers: <a class="ios-beta" href="#">get new builds first on TestFlight</a>.</p>
       </div>
       <div class="card">
         <h3>Android</h3>
-        <p>Open testing on Google Play. Join the beta here with the Google account you use on your phone, then install it from the Play Store on that phone.</p>
-        <a class="btn" id="android-optin" href="#">Join the beta on Google Play</a>
-        <a class="btn dark" id="android-play-2" href="#">View in the Play Store</a>
+        <p>Available on Google Play. Open this link on the device you want to install on.</p>
+        <a class="btn" id="android-play-2" href="#">Get it on Google Play</a>
       </div>
     </div>
   </section>
 
   <!-- COMMUNITY -->
-  <h2 class="section" id="community">Join the beta community</h2>
+  <h2 class="section" id="community">Join the community</h2>
   <div class="card">
     <h3>Talk to us on Discord</h3>
-    <p>Beta testers meet on our Discord server. Report bugs, ask questions, share what your pet's readings looked like, and hear about new builds first.</p>
+    <p>LetsCalm users meet on our Discord server. Report bugs, ask questions, share what your pet's readings looked like, and hear about new versions first.</p>
     <a class="btn dark" id="discord-link" href="#" rel="noopener" target="_blank">Join the Discord</a>
   </div>
 
@@ -123,21 +119,15 @@
 </main>
 
 <script>
-  // --- Links: edit these when the app moves from beta to the stores. ---
+  // --- Store links. ---
   const LINKS = {
     ios: 'https://apps.apple.com/app/id6782188883',
-    iosBeta: 'https://testflight.apple.com/join/YxneXjur',
-    // Open testing: the store listing works on Android phones; the testing
-    // page is the web opt-in for anyone arriving from a computer.
     androidPlay: 'https://play.google.com/store/apps/details?id=com.letscalm.mobile',
-    androidOptIn: 'https://play.google.com/apps/testing/com.letscalm.mobile',
     discord: 'https://discord.gg/NavzxsYyVa',
   };
 
   for (const id of ['ios-link', 'ios-link-2']) document.getElementById(id).href = LINKS.ios;
-  for (const a of document.querySelectorAll('.ios-beta')) a.href = LINKS.iosBeta;
   for (const id of ['android-play', 'android-play-2']) document.getElementById(id).href = LINKS.androidPlay;
-  document.getElementById('android-optin').href = LINKS.androidOptIn;
   document.getElementById('discord-link').href = LINKS.discord;
 
   // --- Detection. `?os=ios|android|all` forces a view for testing. ---
@@ -153,11 +143,11 @@
   if (view === 'ios') {
     document.getElementById('hero-btn').href = LINKS.ios;
     document.getElementById('hero-btn').textContent = 'Get it on the App Store';
-    document.getElementById('hero-note').textContent = 'Free on the App Store.';
+    document.getElementById('hero-note').textContent = 'Free to download. Opens the App Store.';
   } else if (view === 'android') {
     document.getElementById('hero-btn').href = LINKS.androidPlay;
     document.getElementById('hero-btn').textContent = 'Get it on Google Play';
-    document.getElementById('hero-note').textContent = 'Free during the beta. Opens Google Play.';
+    document.getElementById('hero-note').textContent = 'Free to download. Opens Google Play.';
   }
 </script>
 </body>
